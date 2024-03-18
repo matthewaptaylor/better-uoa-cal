@@ -1,0 +1,12 @@
+{
+  "extends": "../tsconfig.json",
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "NodeNext",
+    "baseUrl": "./",
+
+    "moduleResolution": "NodeNext",
+    "outDir": "dist"
+  },
+  "include": ["src"]
+}

@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "skipLibCheck": true,
+
+    "resolveJsonModule": true,
+    "esModuleInterop": true,
+
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  },
+  "include": [],
+  "references": [{ "path": "./tsconfig.dev.json" }]
+}

@@ -1,0 +1,10 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.tabSize": 2,
+  "less.lint.unknownAtRules": "ignore",
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  }
+}
