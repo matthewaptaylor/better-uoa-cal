@@ -11,7 +11,7 @@ export const Login: FC = () => {
 
         const data = new FormData(e.target as HTMLFormElement);
         mutation.mutate({
-          username: data.get('username') as string,
+          username: import.meta.env.VITE_REQUIRED_USERNAME,
           password: data.get('password') as string,
           token: data.get('token') as string,
         });
@@ -24,7 +24,14 @@ export const Login: FC = () => {
         with University of Auckland APIs that use Cognito for authentication.
       </p>
 
-      <input type="text" placeholder="Username" name="username" required />
+      <input
+        type="text"
+        placeholder="Username"
+        name="username"
+        required
+        readOnly
+        value={import.meta.env.VITE_REQUIRED_USERNAME}
+      />
       <input type="password" placeholder="Password" name="password" required />
       <input type="text" placeholder="Token" name="token" required />
       <button type="submit">Login</button>

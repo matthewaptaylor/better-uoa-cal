@@ -29,7 +29,6 @@ export const apiRouter = router({
       ]),
     )
     .mutation(async ({ input }) => {
-      console.log('Received request');
       // Get PKCE authorization code
       const codeVerifier = generateRandomString();
 
@@ -92,7 +91,6 @@ export const apiRouter = router({
         const calendar = createCalendar(tokens.idToken, events);
         const documentRef = await db.calendars.add({
           data: calendar,
-          refreshToken: input.refreshToken,
         });
 
         return {

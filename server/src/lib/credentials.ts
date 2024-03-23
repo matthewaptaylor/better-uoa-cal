@@ -28,6 +28,7 @@ export interface Tokens {
  * Extract cookies from response and add to cookieArray.
  * @param response
  * @param cookieArray
+ * @returns
  */
 const addCookies = (response: Response, cookieArray: string[]) =>
   response.headers.getSetCookie().forEach((c) => {
@@ -213,7 +214,7 @@ export const getAuthorizationCode = async (
     const ssoCookies: string[] = [];
 
     // Navigate to authorize
-    let codeChallenge = await generateCodeChallenge(codeVerifier);
+    const codeChallenge = await generateCodeChallenge(codeVerifier);
     const args = new URLSearchParams({
       response_type: 'code',
       client_id: CLIENT_ID,

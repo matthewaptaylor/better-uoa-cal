@@ -12,6 +12,8 @@ pnpm install
 
 Copy the `client/example.env` file to `client/.env` and fill in the required values.
 
+Copy the `example.firebaserc` file to `.firebaserc` and make the default project the one you want to deploy to.
+
 ## Deployment
 
 ### GitHub Actions
@@ -22,6 +24,7 @@ A GitHub Actions workflow is set up to deploy the client and server to Firebase 
 
 You must also set up the following environment variables in your repository:
 
+- `REQUIRED_USERNAME`: the only UoA username which can request a new token using the front end
 - `TRPC_ENDPOINT`: the URL of the TRPC function
 - `CALENDAR_ENDPOINT`: the URL of the calendar function
 

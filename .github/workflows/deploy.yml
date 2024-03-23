@@ -41,6 +41,7 @@ jobs:
           pnpm --filter=better-uoa-cal-client deploy --prod ../build/client
         working-directory: source
         env:
+          VITE_REQUIRED_USERNAME: ${{ vars.REQUIRED_USERNAME }}
           VITE_TRPC_ENDPOINT: ${{ vars.TRPC_ENDPOINT }}
           VITE_CALENDAR_ENDPOINT: ${{ vars.CALENDAR_ENDPOINT }}
 

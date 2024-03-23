@@ -12,7 +12,7 @@ module.exports = {
     sourceType: 'module',
     project: [
       'tsconfig.json',
-      'tsconfig.node.json',
+      'tsconfig.dev.json',
       'client/tsconfig.json',
       'server/tsconfig.json',
     ],

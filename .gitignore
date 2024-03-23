@@ -1,6 +1,7 @@
 node_modules
 dist
 
+.firebaserc
 .firebase
 firebase-debug.log*
 firebase-debug.*.log*
